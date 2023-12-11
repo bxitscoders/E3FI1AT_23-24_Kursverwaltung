@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dennis.echtner\\source\\repos\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj": {}
+    "C:\\Users\\dennis.echtner\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dennis.echtner\\source\\repos\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj": {
+    "C:\\Users\\dennis.echtner\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dennis.echtner\\source\\repos\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
+        "projectUniqueName": "C:\\Users\\dennis.echtner\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
         "projectName": "Kursverwaltung",
-        "projectPath": "C:\\Users\\dennis.echtner\\source\\repos\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
+        "projectPath": "C:\\Users\\dennis.echtner\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
         "packagesPath": "C:\\Users\\dennis.echtner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dennis.echtner\\source\\repos\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\obj\\",
+        "outputPath": "C:\\Users\\dennis.echtner\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dennis.echtner\\AppData\\Roaming\\NuGet\\NuGet.Config",

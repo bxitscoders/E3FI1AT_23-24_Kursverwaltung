@@ -9,12 +9,21 @@ Kursverwaltung
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+<<<<<<< Updated upstream
 C:\Users\gil.caetano\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
 2-1179461260
 
 10-828794704
 193-1891726104
 MainWindow.xaml;Views\PersonalData.xaml;
+=======
+C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
+2562548779
+
+9-448642635
+193-1891726104
+MainWindow.xaml;Views\AnmeldungView.xaml;
+>>>>>>> Stashed changes
 
 False
 

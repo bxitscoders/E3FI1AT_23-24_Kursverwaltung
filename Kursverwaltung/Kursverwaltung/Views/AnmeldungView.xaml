@@ -12,7 +12,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
+        <Image HorizontalAlignment="Left" Height="100" Margin="70,57,0,0" VerticalAlignment="Top" Width="100" Source="/Views/assets/user.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="30,57,0,0" VerticalAlignment="Top" Width="100" Source="/Views/assets/admin.png" Grid.Column="1"/>
         <StackPanel Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,100,20,0">
 
             <Button Command="{Binding UserCommand}" Padding="10" Width="120" >
@@ -25,7 +26,5 @@
                 <TextBlock Text="Admin" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="100" Margin="70,57,0,0" VerticalAlignment="Top" Width="100" Source="/Views/user.png"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="30,57,0,0" VerticalAlignment="Top" Width="100" Source="/Views/admin.png" Grid.Column="1"/>
     </Grid>
 </Window>

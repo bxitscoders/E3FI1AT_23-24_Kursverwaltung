@@ -39,8 +39,7 @@ namespace Kursverwaltung.ViewModels
 
         private void Anmelden(object parameter)
         {
-            // Hier sollte deine Logik zur Überprüfung der Anmeldedaten sein
-            // Beispiel: Vergleiche mit den Daten aus der Datenbanktabelle "Admins"
+
             if (IstAdmin(Username, Password))
             {
                 MessageBox.Show("Anmeldung erfolgt");

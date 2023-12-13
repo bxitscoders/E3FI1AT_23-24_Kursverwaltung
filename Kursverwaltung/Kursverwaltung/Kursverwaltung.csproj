@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\admin.png" />
+    <None Remove="Views\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\admin.png" />
+    <Resource Include="Views\user.png" />
   </ItemGroup>
 
 </Project>

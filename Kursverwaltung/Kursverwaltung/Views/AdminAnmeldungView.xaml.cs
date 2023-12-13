@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kursverwaltung
+namespace Kursverwaltung.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaktionslogik für AdminAnmeldungView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminAnmeldungView : Window
     {
-        public MainWindow()
+        public AdminAnmeldungView()
         {
             InitializeComponent();
+            DataContext = new ViewModels.AdminAnmeldungVM();
         }
     }
 }

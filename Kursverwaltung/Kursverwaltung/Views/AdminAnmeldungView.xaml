@@ -1,0 +1,22 @@
+﻿<Window x:Class="Kursverwaltung.Views.AdminAnmeldungView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Benutzername:" Margin="5"/>
+        <TextBox Grid.Row="1" x:Name="UsernameTextBox" Margin="5"/>
+
+        <TextBlock Grid.Row="2" Text="Passwort:" Margin="5"/>
+        <PasswordBox Grid.Row="3" x:Name="PasswordBox" Margin="5"/>
+
+        <Button Grid.Row="4" Content="Anmelden" Width="100" Margin="20"/>
+    </Grid>
+</Window>

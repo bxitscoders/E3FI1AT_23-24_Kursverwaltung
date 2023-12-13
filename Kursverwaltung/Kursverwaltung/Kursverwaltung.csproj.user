@@ -7,12 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AdminAnmeldungView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AnmeldungView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\AdminAnmeldungView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AnmeldungView.xaml">

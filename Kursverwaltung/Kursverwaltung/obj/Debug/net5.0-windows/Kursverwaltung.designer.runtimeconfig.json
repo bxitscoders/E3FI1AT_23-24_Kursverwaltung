@@ -6,11 +6,7 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-<<<<<<< Updated upstream
-      "C:\\Users\\gil.caetano\\.dotnet\\store\\|arch|\\|tfm|",
-=======
       "C:\\Users\\dennis.echtner\\.dotnet\\store\\|arch|\\|tfm|",
->>>>>>> Stashed changes
       "C:\\Users\\dennis.echtner\\.nuget\\packages"
     ],
     "configProperties": {

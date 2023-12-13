@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\gil.caetano\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\
+C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\
 Kursverwaltung
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-<<<<<<< Updated upstream
-C:\Users\gil.caetano\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
-2-1179461260
-
-10-828794704
-193-1891726104
-MainWindow.xaml;Views\PersonalData.xaml;
-=======
 C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
-2562548779
+3262916529
 
-9-448642635
+13334216847
 193-1891726104
-MainWindow.xaml;Views\AnmeldungView.xaml;
->>>>>>> Stashed changes
+Views\AdminAnmeldungView.xaml;Views\AnmeldungView.xaml;Views\PersonalData.xaml;
 
 False
 

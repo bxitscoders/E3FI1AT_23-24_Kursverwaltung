@@ -24,7 +24,11 @@ namespace Kursverwaltung
 
         private void AdminButtonClick(object obj)
         {
-            MessageBox.Show("Anmeldung als Admin");
+            var adminAnmeldungVM = new ViewModels.AdminAnmeldungVM(); 
+            var adminAnmeldungView = new Views.AdminAnmeldungView();
+            adminAnmeldungView.DataContext = adminAnmeldungVM; 
+
+            adminAnmeldungView.Show(); 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

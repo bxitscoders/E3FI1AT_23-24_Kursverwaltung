@@ -1,0 +1,36 @@
+﻿<Window x:Class="Kursverwaltung.Views.UserAnmeldungView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ViewModels="clr-namespace:Kursverwaltung.ViewModels" 
+        Height="220" Width="320" ResizeMode="NoResize"
+        >
+    <Window.Resources>
+        <ViewModels:UserAnmeldungVM x:Key="UserAnmeldungVM" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="E-Mail-Adresse:" Margin="10,30,10,5"/>
+        <TextBox Grid.Row="1" x:Name="UserMailTextBox" Margin="5" Text="{Binding Username}"/>
+
+        <TextBlock Grid.Row="2" Text="Passwort:" Margin="10,10,10,5"/>
+        <PasswordBox Grid.Row="3" Name="PasswordBox" Margin="5" PasswordChanged="PasswordBox_PasswordChanged"/>
+
+        <Grid Grid.Row="4" Margin="20,10,20,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Content="Anmelden" Width="100" Margin="0,0,10,0"/>
+            <Button Grid.Column="2" Content="Registrieren" Width="100" Margin="10,0,0,0"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,22 +1,26 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Security;
 using System.Windows;
 using System.Windows.Input;
+using Kursverwaltung.Models.Utilities;
 
 namespace Kursverwaltung.ViewModels
 {
     public class AdminAnmeldungVM : INotifyPropertyChanged
     {
-        private string username;
+        private string adminemail;
         private string password;
+        //Für PasswordBox
+        public SecureString SecurePassword { private get; set; }
 
-        public string Username
+        public string AdminEmail
         {
-            get { return username; }
+            get { return adminemail; }
             set
             {
-                username = value;
-                OnPropertyChanged(nameof(Username));
+                adminemail = value;
+                OnPropertyChanged(nameof(AdminEmail));
             }
         }
 
@@ -39,8 +43,7 @@ namespace Kursverwaltung.ViewModels
 
         private void Anmelden(object parameter)
         {
-
-            if (IstAdmin(Username, Password))
+            if (IstAdmin(AdminEmail, Password))
             {
                 MessageBox.Show("Anmeldung erfolgt");
             }
@@ -52,7 +55,6 @@ namespace Kursverwaltung.ViewModels
 
         private bool IstAdmin(string username, string password)
         {
-
             return (username == "admin" && password == "adminpassword");
         }
 
@@ -61,28 +63,6 @@ namespace Kursverwaltung.ViewModels
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    public class RelayCommand : ICommand
-    {
-        private readonly Action<object> _execute;
-        private readonly Func<object, bool> _canExecute;
-
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
-        {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute;
-        }
-
-        public bool CanExecute(object parameter) => _canExecute?.Invoke(parameter) ?? true;
-
-        public void Execute(object parameter) => _execute(parameter);
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
-3262916529
+4-421467283
 
-13334216847
+16-1957022141
 193-1891726104
-Views\AdminAnmeldungView.xaml;Views\AnmeldungView.xaml;Views\PersonalData.xaml;
+Views\AdminAnmeldungView.xaml;Views\AnmeldungView.xaml;Views\PersonalData.xaml;Views\UserAnmeldungView.xaml;
 
 False
 

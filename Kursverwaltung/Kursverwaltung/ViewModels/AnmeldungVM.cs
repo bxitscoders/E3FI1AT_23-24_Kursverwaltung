@@ -3,6 +3,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using Kursverwaltung.Models.Utilities;
 
 namespace Kursverwaltung
 {
@@ -19,16 +20,20 @@ namespace Kursverwaltung
 
         private void UserButtonClick(object obj)
         {
-            MessageBox.Show("Anmeldung als User");
+            var userAnmeldungVM = new ViewModels.UserAnmeldungVM();
+            var userAnmeldungView = new Views.UserAnmeldungView();
+            userAnmeldungView.DataContext = userAnmeldungVM;
+
+            userAnmeldungView.Show();
         }
 
         private void AdminButtonClick(object obj)
         {
-            var adminAnmeldungVM = new ViewModels.AdminAnmeldungVM(); 
+            var adminAnmeldungVM = new ViewModels.AdminAnmeldungVM();
             var adminAnmeldungView = new Views.AdminAnmeldungView();
-            adminAnmeldungView.DataContext = adminAnmeldungVM; 
+            adminAnmeldungView.DataContext = adminAnmeldungVM;
 
-            adminAnmeldungView.Show(); 
+            adminAnmeldungView.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -36,28 +41,6 @@ namespace Kursverwaltung
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    public class RelayCommand : ICommand
-    {
-        private readonly Action<object> _execute;
-        private readonly Func<object, bool> _canExecute;
-
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
-        {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute;
-        }
-
-        public bool CanExecute(object parameter) => _canExecute == null || _canExecute(parameter);
-
-        public void Execute(object parameter) => _execute(parameter);
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
         }
     }
 }

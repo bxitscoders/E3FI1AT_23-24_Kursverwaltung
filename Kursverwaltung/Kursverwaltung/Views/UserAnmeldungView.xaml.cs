@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kursverwaltung.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,26 +11,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Kursverwaltung.ViewModels;
 
 namespace Kursverwaltung.Views
 {
-    public partial class AdminAnmeldungView : Window
+    public partial class UserAnmeldungView : Window
     {
-        public AdminAnmeldungView()
+        public UserAnmeldungView()
         {
             InitializeComponent();
-            DataContext = new ViewModels.AdminAnmeldungVM();
+            DataContext = new UserAnmeldungVM();
         }
 
         /*PasswordBox lässt sich aus Sicherheitsgründen anscheinend nicht so einfach über DataBinding binden, 
-        * daher habe ich versucht die Lösung von https://stackoverflow.com/a/25001115 abzuleiten*/
-
+         * daher habe ich versucht die Lösung von https://stackoverflow.com/a/25001115 abzuleiten*/
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (DataContext is ViewModels.AdminAnmeldungVM viewModel)
+            if (DataContext is ViewModels.UserAnmeldungVM viewModel)
             {
                 if (sender is PasswordBox passwordBox)
                 {
@@ -38,4 +36,5 @@ namespace Kursverwaltung.Views
             }
         }
     }
+
 }

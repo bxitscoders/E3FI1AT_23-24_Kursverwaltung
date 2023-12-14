@@ -13,12 +13,18 @@
     <Compile Update="Views\AnmeldungView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserAnmeldungView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\AdminAnmeldungView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AnmeldungView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserAnmeldungView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

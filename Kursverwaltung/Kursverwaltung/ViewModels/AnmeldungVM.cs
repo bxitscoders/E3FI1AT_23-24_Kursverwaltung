@@ -21,8 +21,10 @@ namespace Kursverwaltung
         private void UserButtonClick(object obj)
         {
             var userAnmeldungVM = new ViewModels.UserAnmeldungVM();
-            var userAnmeldungView = new Views.UserAnmeldungView();
-            userAnmeldungView.DataContext = userAnmeldungVM;
+            var userAnmeldungView = new Views.UserAnmeldungView
+            {
+                DataContext = userAnmeldungVM
+            };
 
             userAnmeldungView.Show();
         }
@@ -30,8 +32,10 @@ namespace Kursverwaltung
         private void AdminButtonClick(object obj)
         {
             var adminAnmeldungVM = new ViewModels.AdminAnmeldungVM();
-            var adminAnmeldungView = new Views.AdminAnmeldungView();
-            adminAnmeldungView.DataContext = adminAnmeldungVM;
+            var adminAnmeldungView = new Views.AdminAnmeldungView
+            {
+                DataContext = adminAnmeldungVM
+            };
 
             adminAnmeldungView.Show();
         }

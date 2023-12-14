@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Kursverwaltung.Views.UserAnmeldungView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ViewModels="clr-namespace:Kursverwaltung.ViewModels" 
+        xmlns:ViewModels="clr-namespace:Kursverwaltung.ViewModels"
         Height="220" Width="320" ResizeMode="NoResize"
         >
     <Window.Resources>
@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="E-Mail-Adresse:" Margin="10,30,10,5"/>
-        <TextBox Grid.Row="1" x:Name="UserMailTextBox" Margin="5" Text="{Binding Username}"/>
+        <TextBox Grid.Row="1" x:Name="UserMailTextBox" Margin="5" Text="{Binding UserEMail}"/>
 
         <TextBlock Grid.Row="2" Text="Passwort:" Margin="10,10,10,5"/>
         <PasswordBox Grid.Row="3" Name="PasswordBox" Margin="5" PasswordChanged="PasswordBox_PasswordChanged"/>

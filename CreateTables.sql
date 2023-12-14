@@ -4,7 +4,14 @@ CREATE TABLE `test`.`user` (
   `lastName` VARCHAR(45) NULL,
   `dateOfBirth` DATETIME NULL,
   `email` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userId`));
+
+CREATE TABLE `test`.`admin`(
+	`adminId` INT NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(45) NULL,
+    `password` VARCHAR(45) NULL,
+    PRIMARY KEY (`adminId`));
 
 CREATE TABLE `test`.`course` (
   `courseId` INT NOT NULL AUTO_INCREMENT,
@@ -14,7 +21,14 @@ CREATE TABLE `test`.`course` (
   `startDateTime` DATETIME NULL,
   `duration` INT NULL,
   `registrDeadline` DATETIME NULL,
-  PRIMARY KEY (`courseId`));
+  `adminId` INT NOT NULL,
+  PRIMARY KEY (`courseId`),
+  INDEX `adminFk_idx` (`adminId` ASC),
+  CONSTRAINT `adminFk`
+    FOREIGN KEY (`adminId`)
+    REFERENCES `test`.`admin` (`adminId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
   
 CREATE TABLE `test`.`matchcourseuser` (
   `matchId` INT NOT NULL AUTO_INCREMENT,

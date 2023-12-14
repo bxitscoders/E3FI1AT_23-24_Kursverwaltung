@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursverwaltung.Views"
         mc:Ignorable="d"
-        Title="PersonalData" Height="450" Width="800">
+        Title="PersonalData" Height="450" Width="400">
     <Grid>
-        
+        <Label Content="Anmelde Formular" HorizontalContentAlignment="center" HorizontalAlignment="Center" Height="40" Margin="0,39,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Vorname:" HorizontalAlignment="Left" Margin="46,99,0,0" VerticalAlignment="Top" Width="201" Height="30"/>
+        <Label Content="Nachname:" HorizontalAlignment="Left" Margin="46,150,0,0" VerticalAlignment="Top" Width="201" Height="30"/>
+        <Label Content="Geburtsdatum:" HorizontalAlignment="Left" Margin="46,0,0,0" VerticalAlignment="Center" Width="201" Height="30"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="46,253,0,0" VerticalAlignment="Top" Width="201" Height="30"/>
+        <TextBox HorizontalAlignment="Left" Margin="46,129,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox HorizontalAlignment="Left" Margin="46,180,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox HorizontalAlignment="Left" Margin="46,232,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" RenderTransformOrigin="0.493,-1.466"/>
+        <TextBox HorizontalAlignment="Left" Margin="46,283,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+
     </Grid>
 </Window>

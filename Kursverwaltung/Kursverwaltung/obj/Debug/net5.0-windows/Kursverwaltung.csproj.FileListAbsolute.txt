@@ -27,3 +27,5 @@ C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwal
 C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.csprojAssemblyReference.cache
 C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\UserAnmeldungView.baml
 C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\UserAnmeldungView.g.cs
+C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\KurslisteView.baml
+C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\KurslisteView.g.cs

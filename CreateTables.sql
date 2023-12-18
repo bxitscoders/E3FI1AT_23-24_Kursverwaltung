@@ -1,4 +1,4 @@
-CREATE TABLE `test`.`user` (
+CREATE TABLE IF NOT EXISTS `test`.`user` (
   `userId` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NULL,
   `lastName` VARCHAR(45) NULL,
@@ -6,14 +6,19 @@ CREATE TABLE `test`.`user` (
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userId`));
+  INSERT INTO `test`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '01.01.2000', 'test@mail.de', 'Passwort1');
 
-CREATE TABLE `test`.`admin`(
+  
+
+CREATE TABLE IF NOT EXISTS `test`.`admin`(
 	`adminId` INT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(45) NULL,
     `password` VARCHAR(45) NULL,
     PRIMARY KEY (`adminId`));
+	INSERT INTO `test`.`admin` (`userId`, `email`, `password`) VALUES ('1', 'dennis.echtner@its-stuttgart.de', '123123');
 
-CREATE TABLE `test`.`course` (
+
+CREATE TABLE IF NOT EXISTS `test`.`course` (
   `courseId` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(256) NULL,
@@ -30,7 +35,7 @@ CREATE TABLE `test`.`course` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
   
-CREATE TABLE `test`.`matchcourseuser` (
+CREATE TABLE IF NOT EXISTS `test`.`matchcourseuser` (
   `matchId` INT NOT NULL AUTO_INCREMENT,
   `courseId` INT NULL,
   `userId` INT NULL,

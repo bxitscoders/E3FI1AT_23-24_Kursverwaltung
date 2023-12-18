@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Hz8i7L2dxa19cW0FYzk7YJfNU3I1LliqprPYku5y277jk6aQge0drRGRvEyKtiZloCk4fUujCiVxx1Hcksm7+A==",
+  "dgSpecHash": "RwmxDJjc7+6bTtXK88GkGrtLwRgUIMvKF/mRkNKecWwWEstXm28N+0z0SX6e0SUwTwTENdJ0NZZeU7oilQMLOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\arbi.gurzhikhanov\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\arbi.gurzhikhanov\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\arbi.gurzhikhanov\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\arbi.gurzhikhanov\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

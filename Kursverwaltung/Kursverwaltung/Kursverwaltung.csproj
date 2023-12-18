@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Views\assets\admin.png" />
     <Resource Include="Views\assets\user.png" />
   </ItemGroup>

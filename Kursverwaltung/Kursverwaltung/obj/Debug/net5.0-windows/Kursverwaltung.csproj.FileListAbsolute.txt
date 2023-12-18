@@ -60,3 +60,10 @@ C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursver
 C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\ref\Kursverwaltung.dll
 C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.pdb
 C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.genruntimeconfig.cache
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\Login.g.cs
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\App.baml
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\bin\Debug\net5.0-windows\MaterialDesignColors.dll
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\bin\Debug\net5.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\Login.baml
+C:\Users\arbi.gurzhikhanov\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.csproj.CopyComplete

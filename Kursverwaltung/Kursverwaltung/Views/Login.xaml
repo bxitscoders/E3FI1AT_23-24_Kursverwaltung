@@ -15,7 +15,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="750" Width="400">
+        Title="Login" Height="700" Width="400">
     <Grid Margin="25">
         <StackPanel>
             <Image Margin="0 60 0 5" Source="assets/user.png" Height="100"></Image>

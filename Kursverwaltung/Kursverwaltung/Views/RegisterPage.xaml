@@ -2,8 +2,8 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Kursverwaltung.Views"
+      xmlns:VM="clr-namespace:Kursverwaltung.ViewModels"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -13,11 +13,14 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-      d:DesignHeight="465" d:DesignWidth="400"
+      d:DesignHeight="700" d:DesignWidth="400"
       Title="RegisterPage">
 
     <Grid>
         <StackPanel>
+            <Image Margin="0 60 0 10" Source="assets/user.png" Height="100"></Image>
+            <TextBlock Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="16">Register a new account!</TextBlock>
+
             <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
                 <TextBox x:Name="txtRegisterFirstname"
                      BorderThickness="0" FontSize="18" 

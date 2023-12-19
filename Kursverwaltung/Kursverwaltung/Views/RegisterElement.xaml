@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="Kursverwaltung.Views.RegisterElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kursverwaltung.Views"
+             mc:Ignorable="d" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                TextElement.FontWeight="Regular"
+                TextElement.FontSize="13"
+                TextOptions.TextFormattingMode="Ideal"
+                TextOptions.TextRenderingMode="Auto"
+                Background="{DynamicResource MaterialDesignPaper}"
+                FontFamily="{DynamicResource MaterialDesignFont}"
+              d:DesignHeight="700" d:DesignWidth="400">
+    <Grid>
+        <StackPanel x:Name="RegElement">
+            <Image Margin="0 10 0 10" Source="assets/user.png" Height="75"></Image>
+        <TextBlock Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="16">Register a new account!</TextBlock>
+
+        <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
+            <TextBox x:Name="txtRegisterFirstname"
+                     BorderThickness="0" FontSize="18" 
+                     VerticalAlignment="Center" Padding="10 0 0 0" 
+                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                         materialDesign:HintAssist.Hint="Firstname"></TextBox>
+        </Border>
+        <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
+            <TextBox x:Name="txtRegisterLastname"
+                     BorderThickness="0" FontSize="18" 
+                     VerticalAlignment="Center" Padding="10 0 0 0" 
+                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                         materialDesign:HintAssist.Hint="Lastname"></TextBox>
+        </Border>
+        <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
+            <TextBox x:Name="txtRegisterEmail"
+                     BorderThickness="0" FontSize="18" 
+                     VerticalAlignment="Center" Padding="10 0 0 0" 
+                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                         materialDesign:HintAssist.Hint="E-Mail"></TextBox>
+        </Border>
+        <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="0" CornerRadius="3">
+
+            <DatePicker x:Name="dateRegisterBirthday" 
+                         materialDesign:HintAssist.Hint="Birthday"
+                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"></DatePicker>
+        </Border>
+
+        <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
+
+            <PasswordBox x:Name="txtRegisterPassword"
+                     BorderThickness="0" FontSize="18" 
+                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                    VerticalAlignment="Center" Padding="10 0 0 0"
+                         materialDesign:HintAssist.Hint="Password"></PasswordBox>
+        </Border>
+            <Button x:Name="RegisterNewAccount" FontSize="16"
+                    Command="{Binding RegisterCommand}"
+                    Margin="0 20 0 5" Width="250" Height="50" 
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}" 
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0">CREATE ACCOUNT</Button>
+            <Button x:Name="ReturnToLogin" FontSize="16"
+                    Margin="0 0 0 555" Width="250" Height="50" 
+                    Style="{StaticResource MaterialDesignFlatButton}" 
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0" Click="ReturnToLogin_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

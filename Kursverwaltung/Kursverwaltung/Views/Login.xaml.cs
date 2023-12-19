@@ -35,5 +35,11 @@ namespace Kursverwaltung.Views
                 }
             }
         }
+        private void CreateAccount_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ViewModels.RegisterVM();
+            //this.LoginPage.Visibility = Visibility.Collapsed;
+            this.RegElement.Visibility = Visibility.Visible;
+        }
     }
 }

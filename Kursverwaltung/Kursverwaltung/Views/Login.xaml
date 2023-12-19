@@ -17,48 +17,48 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Title="" Height="700" Width="400">
-    <Window.DataContext>
-        <VM:LoginVM />
-    </Window.DataContext>
-    <Grid Margin="25">
-            <StackPanel x:Name="LoginPage">
-                <Image Margin="0 60 0 5" Source="assets/user.png" Height="100"></Image>
-                <TextBlock Margin="0 15 0 5" HorizontalAlignment="Center" FontWeight="Bold"
-                               FontSize="26">Welcome!</TextBlock>
-                <TextBlock Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="16">Login to your account!</TextBlock>
+        <Window.DataContext>
+            <VM:LoginVM />
+        </Window.DataContext>
+        <Grid Margin="25">
+        <StackPanel  x:Name="LoginPage" >
+            <local:RegisterElement x:Name="RegElement" Visibility="Collapsed"></local:RegisterElement>
+            <Image Margin="0 60 0 5" Source="assets/user.png" Height="100"></Image>
+                    <TextBlock Margin="0 15 0 5" HorizontalAlignment="Center" FontWeight="Bold"
+                                   FontSize="26">Welcome!</TextBlock>
+                    <TextBlock Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="16">Login to your account!</TextBlock>
 
-            <Border Margin="0 50 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
-                <TextBox Text="{Binding Email}"
-                             BorderThickness="0" FontSize="18" 
-                             VerticalAlignment="Center" Padding="10 0 0 0" 
-                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                 materialDesign:HintAssist.Hint="E-Mail"></TextBox>
-            </Border>
-                
-            <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
-
-                <PasswordBox x:Name="PasswordBox"
-                             BorderThickness="0" FontSize="18" 
-                             materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                             PasswordChanged="PWBoxChanged"
-                            VerticalAlignment="Center" Padding="10 0 0 0"
-                                 materialDesign:HintAssist.Hint="Password"></PasswordBox>
+                <Border Margin="0 50 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
+                    <TextBox Text="{Binding Email}"
+                                 BorderThickness="0" FontSize="18" 
+                                 VerticalAlignment="Center" Padding="10 0 0 0" 
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                     materialDesign:HintAssist.Hint="E-Mail"></TextBox>
                 </Border>
+                
+                <Border Margin="0 20 0 5" Width="250" Height="50" BorderBrush="LightGray" BorderThickness="1" CornerRadius="3">
 
-                <Button x:Name="SignIn" FontSize="16"
-                            Command="{Binding LoginCommand}"
-                            CommandParameter="{Binding ElementName=PasswordBox}"
-                            Margin="0 20 0 5" Width="250" Height="50" 
-                            Style="{StaticResource MaterialDesignFlatMidBgButton}" 
-                            materialDesign:ShadowAssist.ShadowDepth="Depth0">SIGN IN</Button>
+                    <PasswordBox x:Name="PasswordBox"
+                                 BorderThickness="0" FontSize="18" 
+                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                 PasswordChanged="PWBoxChanged"
+                                VerticalAlignment="Center" Padding="10 0 0 0"
+                                     materialDesign:HintAssist.Hint="Password"></PasswordBox>
+                    </Border>
 
-                <Button x:Name="CreateAccount" FontSize="16"
-                            Margin="0 10 0 5" Width="250" Height="50" 
-                            Style="{StaticResource MaterialDesignFlatButton}" 
-                            materialDesign:ShadowAssist.ShadowDepth="Depth0">CREATE ACCOUNT</Button>
+                    <Button x:Name="SignIn" FontSize="16"
+                                Command="{Binding LoginCommand}"
+                                CommandParameter="{Binding ElementName=PasswordBox}"
+                                Margin="0 20 0 5" Width="250" Height="50" 
+                                Style="{StaticResource MaterialDesignFlatMidBgButton}" 
+                                materialDesign:ShadowAssist.ShadowDepth="Depth0">SIGN IN</Button>
+
+                    <Button x:Name="CreateAccount" FontSize="16"
+                                Margin="0 10 0 5" Width="250" Height="50" 
+                                Style="{StaticResource MaterialDesignFlatButton}" 
+                                materialDesign:ShadowAssist.ShadowDepth="Depth0" Click="CreateAccount_Click" Cursor="Hand">CREATE ACCOUNT</Button>
 
 
-            </StackPanel>
-
+                </StackPanel>
         </Grid>
 </Window>

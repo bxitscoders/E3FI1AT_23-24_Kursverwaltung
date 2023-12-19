@@ -109,3 +109,5 @@ C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\K
 C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.dll
 C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\ref\Kursverwaltung.dll
 C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Kursverwaltung.genruntimeconfig.cache
+C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\RegisterElement.g.cs
+C:\Users\arbi.gurzhikhanov\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\Views\RegisterElement.baml

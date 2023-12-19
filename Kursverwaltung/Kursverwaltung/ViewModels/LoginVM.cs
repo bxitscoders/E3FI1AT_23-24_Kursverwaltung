@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Security;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Kursverwaltung.Models.Utilities;
 
@@ -9,18 +10,17 @@ namespace Kursverwaltung.ViewModels
 {
     public class LoginVM : INotifyPropertyChanged
     {
-        private string username;
+        private string email;
         private string password;
 
-        public SecureString SecurePassword { private get; set; }
 
-        public string Username
+        public string Email
         {
-            get { return username;  }
+            get { return email;  }
             set
             {
-                username = value;
-                OnPropertyChanged(nameof(Username));
+                email = value;
+                OnPropertyChanged(nameof(Email));
             }
         }
 
@@ -34,16 +34,21 @@ namespace Kursverwaltung.ViewModels
             }
         }
 
-        public ICommand LoginCommand { get; private set; }
-
-        public LoginVM()
+        private ICommand _loginCommand;
+        public ICommand LoginCommand
         {
-            LoginCommand = new RelayCommand(UserLogin);
+            get
+            {
+                if (_loginCommand == null)
+                    _loginCommand = new RelayCommand(UserLogin);
+                return _loginCommand;
+            }
         }
 
         private void UserLogin(object parameter)
         {
-            if (isAdmin(Username, Password))
+            Password = ((PasswordBox) parameter).Password;
+            if (isAdmin(email, password))
             {
                 MessageBox.Show("200: User is Admin.");
             } else
@@ -52,9 +57,9 @@ namespace Kursverwaltung.ViewModels
             }
         }
 
-        private bool isAdmin(string username, string password)
+        private bool isAdmin(string email, string password)
         {
-            return (username == "admin" && password == "admin"); 
+            return (email == "admin" && password == "admin"); 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -13,10 +13,16 @@
     <Compile Update="Views\AnmeldungView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\CourseManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\KurslisteView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserAnmeldungView.xaml.cs">
@@ -30,10 +36,16 @@
     <Page Update="Views\AnmeldungView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\CourseManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\KurslisteView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegisterPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserAnmeldungView.xaml">

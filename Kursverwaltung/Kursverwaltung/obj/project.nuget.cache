@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RwmxDJjc7+6bTtXK88GkGrtLwRgUIMvKF/mRkNKecWwWEstXm28N+0z0SX6e0SUwTwTENdJ0NZZeU7oilQMLOg==",
+  "dgSpecHash": "D88gImS/fq4P4vxnTEV5kBCveU309gmNeNlDOkKnAOMBl7FPgdhYQ8W4/gyTgLST0v6h8vtUHsgcM6CxC5SkZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arbi.gurzhikhanov\\Documents\\GitHub\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
+  "projectFilePath": "C:\\Users\\arbi.gurzhikhanov\\Desktop\\E3FI1AT_23-24_Kursverwaltung\\Kursverwaltung\\Kursverwaltung\\Kursverwaltung.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arbi.gurzhikhanov\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
     "C:\\Users\\arbi.gurzhikhanov\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",

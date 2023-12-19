@@ -22,7 +22,7 @@ namespace Kursverwaltung.Views
         public Login()
         {
             InitializeComponent();
-            DataContext = new ViewModels.AdminAnmeldungVM();
+            DataContext = new ViewModels.LoginVM();
         }
 
         private void PWBoxChanged(object sender, RoutedEventArgs e)

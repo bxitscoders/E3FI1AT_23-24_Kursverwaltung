@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Kursverwaltung",
+    "\\Kursverwaltung\\Kursverwaltung"
   ],
+  "SelectedNode": "\\Kursverwaltung\\Kursverwaltung.sln",
   "PreviewInSolutionExplorer": false
 }

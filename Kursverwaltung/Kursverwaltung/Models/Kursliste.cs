@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.ObjectModel;
 
 namespace Kursverwaltung.Models
@@ -11,28 +12,36 @@ namespace Kursverwaltung.Models
         {
             Kurse = new ObservableCollection<Kurs>();
 
-            Kurse.Add(new Kurs
+            GetCourseData();
+        }
+
+        public void GetCourseData()
+        {
+            DBConnect dbConnect = new DBConnect();
+            string query = "SELECT * FROM course";
+            MySqlCommand cmd = new MySqlCommand(query, dbConnect.connection);
+            dbConnect.connection.Open();
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            Kurs course = new Kurs();
+
+            while (dataReader.Read())
             {
-                //Platzhalter -> Ersetzen durch Abruf aus DB
-                Name = "Beispielkurs 1",
-                Datum = new DateTime(2023, 12, 31),
-                Anmeldefrist = new DateTime(2023, 12, 28),
-                AktuelleTeilnehmerzahl = 5,
-                MaximaleTeilnehmerzahl = 15
-            });
+                ReadCourseData(course, dataReader);
+                Kurse.Add(course);
+            }
+        }
 
-            Kurse.Add(new Kurs
-            {
-                //Platzhalter -> Ersetzen durch Abruf aus DB
-
-                Name = "Beispielkurs 2",
-                Datum = new DateTime(2024, 1, 15),
-                Anmeldefrist = new DateTime(2024, 1, 10),
-                AktuelleTeilnehmerzahl = 10,
-                MaximaleTeilnehmerzahl = 20
-            });
-
-
+        private static void ReadCourseData(Kurs course, MySqlDataReader dataReader)
+        {
+            course.KursId = Convert.ToInt32(dataReader["courseId"]);
+            course.Name = dataReader["name"].ToString();
+            course.Beschreibung = dataReader["description"].ToString();
+            course.MaximaleTeilnehmerzahl = Convert.ToInt32(dataReader["maxUsers"]);
+            course.Datum = Convert.ToDateTime(dataReader["startDateTime"]);
+            course.Dauer = Convert.ToInt32(dataReader["duration"]);
+            course.Anmeldefrist = Convert.ToDateTime(dataReader["registrDeadline"]);
+            course.AdminId = Convert.ToInt32(dataReader["adminId"]);
         }
     }
 }

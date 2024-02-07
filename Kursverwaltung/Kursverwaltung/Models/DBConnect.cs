@@ -11,6 +11,11 @@ namespace Kursverwaltung.Models
         private string uid;
         private string password;
 
+        public MySqlConnection Connection // Diese Eigenschaft wurde hinzugefügt
+        {
+            get { return connection; }
+        }
+
         public DBConnect()
         {
             Initialize();
@@ -18,16 +23,16 @@ namespace Kursverwaltung.Models
 
         private void Initialize()
         {
-            server = "Kursverwaltung"; 
-            database = "Kursverwaltung"; 
-            uid = "Benutzername"; 
-            password = "Passwort"; 
+            server = "Kursverwaltung";
+            database = "Kursverwaltung";
+            uid = "Benutzername";
+            password = "Passwort";
             string connectionString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
 
             connection = new MySqlConnection(connectionString);
         }
 
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -41,7 +46,7 @@ namespace Kursverwaltung.Models
             }
         }
 
-        private bool CloseConnection()
+        public bool CloseConnection()
         {
             try
             {

@@ -4,9 +4,7 @@
         xmlns:kursverwaltung="clr-namespace:Kursverwaltung" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         Title="Anmeldung" Height="300" Width="400" ResizeMode="NoResize">
-    <Window.DataContext>
-        <kursverwaltung:AnmeldungVM />
-    </Window.DataContext>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>

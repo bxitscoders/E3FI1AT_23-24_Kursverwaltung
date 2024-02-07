@@ -53,7 +53,7 @@ namespace Kursverwaltung.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Kursverwaltung;component/views/personaldata.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Kursverwaltung;V1.0.0.0;component/views/personaldata.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\PersonalData.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

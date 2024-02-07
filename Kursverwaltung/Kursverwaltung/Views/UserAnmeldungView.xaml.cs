@@ -24,7 +24,7 @@ namespace Kursverwaltung.Views
         }
 
         /*PasswordBox lässt sich aus Sicherheitsgründen anscheinend nicht so einfach über DataBinding binden, 
-         * daher habe ich versucht die Lösung von https://stackoverflow.com/a/25001115 abzuleiten*/
+         * daher habe ich versucht, die Lösung von https://stackoverflow.com/a/25001115 abzuleiten*/
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (DataContext is ViewModels.UserAnmeldungVM viewModel)
@@ -34,6 +34,11 @@ namespace Kursverwaltung.Views
                     viewModel.SecurePassword = passwordBox.SecurePassword;
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 

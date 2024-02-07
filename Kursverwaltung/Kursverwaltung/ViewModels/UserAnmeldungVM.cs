@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using Kursverwaltung.Models.Utilities;
 using System.Security;
+using Kursverwaltung.Views;
 
 namespace Kursverwaltung.ViewModels
 {
@@ -43,8 +44,11 @@ namespace Kursverwaltung.ViewModels
 
         private void Registrieren(object parameter)
         {
+            var personalDataVM = new PersonalDataVM();
+            var personalDataView = new PersonalDataView();
+            personalDataView.DataContext = personalDataVM;
 
-            MessageBox.Show("Registrieren geklickt");
+            personalDataView.Show();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

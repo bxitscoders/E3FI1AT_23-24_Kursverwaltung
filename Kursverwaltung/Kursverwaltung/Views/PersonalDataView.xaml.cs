@@ -11,17 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Kursverwaltung.ViewModels;
 
 namespace Kursverwaltung.Views
 {
     /// <summary>
     /// Interaktionslogik für PersonalData.xaml
     /// </summary>
-    public partial class PersonalData : Window
+    public partial class PersonalDataView : Window
     {
-        public PersonalData()
+        public PersonalDataView()
         {
             InitializeComponent();
+            DataContext = new ViewModels.PersonalDataVM();
         }
     }
 }

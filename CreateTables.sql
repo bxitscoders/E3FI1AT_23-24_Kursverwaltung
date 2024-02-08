@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `test`.`user` (
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userId`));
-  INSERT INTO `test`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '01.01.2000', 'test@mail.de', 'Passwort1');
+  INSERT INTO `test`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '2000-01-01 00:00:00', 'test@mail.de', 'Passwort1');
 
   
 
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `test`.`admin`(
     `email` VARCHAR(45) NULL,
     `password` VARCHAR(45) NULL,
     PRIMARY KEY (`adminId`));
-	INSERT INTO `test`.`admin` (`userId`, `email`, `password`) VALUES ('1', 'dennis.echtner@its-stuttgart.de', '123123');
+	INSERT INTO `test`.`admin` (`adminId`, `email`, `password`) VALUES ('1', 'dennis.echtner@its-stuttgart.de', '123123');
 
 
 CREATE TABLE IF NOT EXISTS `test`.`course` (

@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursverwaltung.Views"
         mc:Ignorable="d"
-        Title="User registrieren" Height="250" Width="290">
-    <Grid Height="227" VerticalAlignment="Top">
+        Title="User registrieren" Height="297" Width="290">
+    <Grid Height="309" VerticalAlignment="Top">
         <Label x:Name="lblWelcome" Content="Willkommen bei der Kursverwaltung!" HorizontalContentAlignment="center" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="270" FontSize="16"/>
-        <Label Content="Vorname:" HorizontalAlignment="Left" Margin="46,52,0,0" VerticalAlignment="Top" Width="60" Height="30"/>
-        <Label Content="Nachname:" HorizontalAlignment="Left" Margin="37,82,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
-        <Label Content="Geburtsdatum:" HorizontalAlignment="Left" Margin="18,110,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
-        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="61,142,0,0" VerticalAlignment="Top" Width="47" Height="30"/>
-        <TextBox x:Name="txbNewUserFirstName" HorizontalAlignment="Left" Margin="112,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-        <TextBox x:Name="txbNewUserLastName" HorizontalAlignment="Left" Margin="112,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-        <TextBox x:Name="txbNewUserBirthdate" HorizontalAlignment="Left" Margin="112,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" RenderTransformOrigin="0.493,-1.466"/>
-        <TextBox x:Name="txbNewUserMail" HorizontalAlignment="Left" Margin="112,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-        <Button x:Name="btnNewUserRgst" Content="Registrieren" HorizontalAlignment="Center" Margin="0,179,0,0" VerticalAlignment="Top" Width="92"/>
-
+        <Label Content="Vorname:" HorizontalAlignment="Left" Margin="66,52,0,0" VerticalAlignment="Top" Width="72" Height="30"/>
+        <Label Content="Nachname:" HorizontalAlignment="Left" Margin="57,81,0,0" VerticalAlignment="Top" Width="81" Height="30"/>
+        <Label Content="Geburtsdatum:" HorizontalAlignment="Left" Margin="39,112,0,0" VerticalAlignment="Top" Width="99" Height="30"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="81,142,0,0" VerticalAlignment="Top" Width="57" Height="30"/>
+        <TextBox x:Name="txbNewUserFirstName" HorizontalAlignment="Left" Margin="138,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding Path=FirstName, Mode=TwoWay}"/>
+        <TextBox x:Name="txbNewUserLastName" HorizontalAlignment="Left" Margin="138,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding Path=LastName, Mode=TwoWay}"/>
+        <TextBox x:Name="txbNewUserBirthdate" HorizontalAlignment="Left" Margin="138,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding Path=Birthdate, Mode=TwoWay}"/>
+        <TextBox x:Name="txbNewUserMail" HorizontalAlignment="Left" Margin="138,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding Path=Email, Mode=TwoWay}"/>
+        <TextBox x:Name="txbNewUserPW" HorizontalAlignment="Left" Margin="138,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding Path=Password, Mode=TwoWay}"/>
+        <Button x:Name="btnNewUserRgst" Content="Registrieren" HorizontalAlignment="Center" Margin="0,232,0,0" VerticalAlignment="Top" Width="92" Command="{Binding RegisterCommand}"/>
+        <Label Content="Passwort:" HorizontalAlignment="Left" Margin="69,166,0,0" VerticalAlignment="Top" Width="69" Height="30"/>
+        <TextBox x:Name="txbNewUserPWBestätigen" HorizontalAlignment="Left" Margin="138,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" Text="{Binding PasswordConfirmation}"/>
+        <Label Content="Passwort bestätigen:" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Width="128" Height="28"/>
     </Grid>
 </Window>

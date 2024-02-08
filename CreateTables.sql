@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS `test`.`user` (
+CREATE SCHEMA IF NOT EXISTS `kvdb`;
+
+CREATE TABLE IF NOT EXISTS `kvdb`.`user` (
   `userId` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NULL,
   `lastName` VARCHAR(45) NULL,
@@ -6,23 +8,24 @@ CREATE TABLE IF NOT EXISTS `test`.`user` (
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userId`));
-  INSERT INTO `test`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '01.01.2000', 'test@mail.de', 'Passwort1');
+  INSERT INTO `kvdb`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '01.01.2000', 'test@mail.de', 'Passwort1');
 
   
 
-CREATE TABLE IF NOT EXISTS `test`.`admin`(
+CREATE TABLE IF NOT EXISTS `kvdb`.`admin`(
 	`adminId` INT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(45) NULL,
     `password` VARCHAR(45) NULL,
     PRIMARY KEY (`adminId`));
-	INSERT INTO `test`.`admin` (`userId`, `email`, `password`) VALUES ('1', 'dennis.echtner@its-stuttgart.de', '123123');
+	INSERT INTO `kvdb`.`admin` (`adminId`, `email`, `password`) VALUES ('1', 'dennis.echtner@its-stuttgart.de', '123123');
 
 
-CREATE TABLE IF NOT EXISTS `test`.`course` (
+CREATE TABLE IF NOT EXISTS `kvdb`.`course` (
   `courseId` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(256) NULL,
   `maxUsers` INT NULL,
+  `currentUsers` INT NULL,
   `startDateTime` DATETIME NULL,
   `duration` INT NULL,
   `registrDeadline` DATETIME NULL,
@@ -31,11 +34,11 @@ CREATE TABLE IF NOT EXISTS `test`.`course` (
   INDEX `adminFk_idx` (`adminId` ASC),
   CONSTRAINT `adminFk`
     FOREIGN KEY (`adminId`)
-    REFERENCES `test`.`admin` (`adminId`)
+    REFERENCES `kvdb`.`admin` (`adminId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
   
-CREATE TABLE IF NOT EXISTS `test`.`matchcourseuser` (
+CREATE TABLE IF NOT EXISTS `kvdb`.`matchcourseuser` (
   `matchId` INT NOT NULL AUTO_INCREMENT,
   `courseId` INT NULL,
   `userId` INT NULL,
@@ -44,11 +47,11 @@ CREATE TABLE IF NOT EXISTS `test`.`matchcourseuser` (
   INDEX `userFk_idx` (`userId` ASC),
   CONSTRAINT `courseFk`
     FOREIGN KEY (`courseId`)
-    REFERENCES `test`.`course` (`courseId`)
+    REFERENCES `kvdb`.`course` (`courseId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `userFk`
     FOREIGN KEY (`userId`)
-    REFERENCES `test`.`user` (`userId`)
+    REFERENCES `kvdb`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);

@@ -1,24 +1,28 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using Kursverwaltung.Models;
 
 namespace Kursverwaltung.ViewModels
 {
     public class KurslisteVM : INotifyPropertyChanged
     {
-        private Models.Kursliste kursliste;
+        private ObservableCollection<Course> courses;
 
-        public Models.Kursliste Kursliste
+        public ObservableCollection<Course> Courses
         {
-            get { return kursliste; }
+            get { return courses; }
             set
             {
-                kursliste = value;
-                OnPropertyChanged(nameof(Kursliste));
+                courses = value;
+                OnPropertyChanged(nameof(Courses));
             }
         }
 
         public KurslisteVM()
         {
-            Kursliste = new Models.Kursliste();
+            DBConnect dbConnect = new DBConnect();
+
+            Courses = new ObservableCollection<Course>(dbConnect.GetCourses());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

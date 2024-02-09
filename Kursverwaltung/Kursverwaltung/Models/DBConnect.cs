@@ -24,10 +24,10 @@ namespace Kursverwaltung.Models
 
         private void Initialize()
         {
-            server = "KursverwaltungDB";
+            server = "127.0.0.1";
             database = "kvdb";
-            uid = "Benutzername";
-            password = "Passwort";
+            uid = "root";
+            password = "";
             string connectionString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
 
             connection = new MySqlConnection(connectionString);

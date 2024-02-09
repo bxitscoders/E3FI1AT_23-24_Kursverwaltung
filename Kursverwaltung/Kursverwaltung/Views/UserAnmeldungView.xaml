@@ -17,7 +17,7 @@
         <TextBox Grid.Row="1" x:Name="UserMailTextBox" Margin="5" Text="{Binding UserEMail}"/>
 
         <TextBlock Grid.Row="2" Text="Passwort:" Margin="10,10,10,5"/>
-        <PasswordBox Grid.Row="3" Name="PasswordBox" Margin="5" PasswordChanged="PasswordBox_PasswordChanged"/>
+        <TextBox Grid.Row="3" Name="PasswordTextBox" Margin="5" Text="{Binding Password}"></TextBox>
 
         <Grid Grid.Row="4" Margin="20,10,20,10">
             <Grid.ColumnDefinitions>

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using Kursverwaltung.Models.Utilities;
+using Kursverwaltung.Models;
 using System.Security;
 using Kursverwaltung.Views;
 
@@ -12,12 +13,23 @@ namespace Kursverwaltung.ViewModels
     public class UserAnmeldungVM : INotifyPropertyChanged
     {
         private string _useremail;
+        private string _password;
         public string UserEMail
         {
             get { return _useremail; }
             set
             {
                 _useremail = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                _password = value;
                 OnPropertyChanged();
             }
         }
@@ -38,8 +50,20 @@ namespace Kursverwaltung.ViewModels
 
         private void Anmelden(object parameter)
         {
+            DBConnect dbConnect = new DBConnect();
 
-            MessageBox.Show("Anmelden geklickt");
+            if(dbConnect.CheckLogin(UserEMail, Password))
+            {
+                var kurslisteVM = new KurslisteVM();
+                var kurslisteView = new KurslisteView();
+                kurslisteView.DataContext = kurslisteVM;
+
+                kurslisteView.Show();
+            }
+            else
+            {
+                MessageBox.Show("Die Email und das Passwort stimmen nicht überein!");
+            }
         }
 
         private void Registrieren(object parameter)

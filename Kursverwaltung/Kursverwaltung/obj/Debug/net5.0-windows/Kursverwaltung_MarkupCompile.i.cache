@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\
+C:\Users\patrick.nast\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\obj\Debug\net5.0-windows\
 Kursverwaltung
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\dennis.echtner\Documents\GitHub\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
+C:\Users\patrick.nast\Desktop\E3FI1AT_23-24_Kursverwaltung\Kursverwaltung\Kursverwaltung\App.xaml
 5-996249766
 
 20733757869
-202-769198090
+2021202075894
 Views\AdminAnmeldungView.xaml;Views\AnmeldungView.xaml;Views\KurslisteView.xaml;Views\PersonalDataView.xaml;Views\UserAnmeldungView.xaml;
 
-False
+True
 

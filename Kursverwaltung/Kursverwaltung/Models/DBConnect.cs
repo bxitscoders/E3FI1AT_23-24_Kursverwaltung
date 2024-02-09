@@ -96,5 +96,28 @@ namespace Kursverwaltung.Models
 
             return courses;
         }
+
+        public bool CheckLogin(string email, string password)
+        {
+            bool res = false;
+
+            if (this.OpenConnection())
+            {
+                string query = $"Select * from user where email='{email}' and password='{password}'";
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    res = true;
+                }
+
+                this.CloseConnection();
+            }
+
+            return res;
+        }
     }
 }

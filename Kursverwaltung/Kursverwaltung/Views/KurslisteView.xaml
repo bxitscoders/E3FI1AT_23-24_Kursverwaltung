@@ -11,21 +11,20 @@
 
         <Label Content="Kursliste" FontSize="20" FontWeight="Bold"/>
 
-        <ItemsControl ItemsSource="{Binding Courses}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Description}" />
-                        <TextBlock Text="{Binding MaxUsers, StringFormat='Max Users: {0}'}" />
-                        <TextBlock Text="{Binding CurrentUsers, StringFormat='Current Users: {0}'}" />
-                        <TextBlock Text="{Binding StartDateTime, StringFormat='Start Date: {0:dd.MM.yyyy HH:mm}'}" />
-                        <TextBlock Text="{Binding Duration, StringFormat='Duration: {0}'}" />
-                        <TextBlock Text="{Binding RegistrDeadline, StringFormat='Registration Deadline: {0:dd.MM.yyyy HH:mm}'}" />
-                        <TextBlock Text="{Binding AdminId, StringFormat='Admin ID: {0}'}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <ListView ItemsSource="{Binding Courses}">
+            <ListView.View>
+                <GridView ColumnHeaderToolTip="Course List Information">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=CourseId}" Header="CourseId" Width="50"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="60"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MaxUsers}" Header="MaxUsers" Width="50"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=CurrentUsers}" Header="CurrentUsers" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=StartDateTime}" Header="StartDateTime" Width="130"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Duration}" Header="Duration" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=RegistrDeadline}" Header="RegistrDeadline" Width="130"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=AdminId}" Header="AdminId" Width="50"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

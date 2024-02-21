@@ -80,8 +80,9 @@ namespace Kursverwaltung.Models
                                 Name = dataReader["name"].ToString(),
                                 Description = dataReader["description"].ToString(),
                                 MaxUsers = Convert.ToInt32(dataReader["maxUsers"]),
+                                CurrentUsers = Convert.ToInt32(dataReader["currentUsers"]),
                                 StartDateTime = Convert.ToDateTime(dataReader["startDateTime"]),
-                                Duration = TimeSpan.Parse(dataReader["duration"].ToString()),
+                                Duration = Convert.ToInt32(dataReader["duration"]),
                                 RegistrDeadline = Convert.ToDateTime(dataReader["registrDeadline"]),
                                 AdminId = Convert.ToInt32(dataReader["adminId"])
                             };

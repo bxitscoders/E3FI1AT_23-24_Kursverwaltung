@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `kvdb`.`user` (
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userId`));
-  INSERT INTO `kvdb`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '01.01.2000', 'test@mail.de', 'Passwort1');
+  INSERT INTO `kvdb`.`user` (`userId`, `firstName`, `lastName`, `dateOfBirth`, `email`, `password`) VALUES ('1', 'test', 'user', '2000-01-01 00:00:00', 'test@mail.de', 'Passwort1');
 
   
 
@@ -37,6 +37,8 @@ CREATE TABLE IF NOT EXISTS `kvdb`.`course` (
     REFERENCES `kvdb`.`admin` (`adminId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+    INSERT INTO `kvdb`.`course` (`courseId`, `name`, `description`, `maxUsers`, `currentUsers`, `startDateTime`, `duration`, `registrDeadline`, `adminId`) VALUES ('1', 'kurs1', 'test', '10', '5', '2024-02-21 10:00:00', '60', '2024-02-20 10:00:00', '1');
+	INSERT INTO `kvdb`.`course` (`courseId`, `name`, `description`, `maxUsers`, `currentUsers`, `startDateTime`, `duration`, `registrDeadline`, `adminId`) VALUES ('2', 'kurs2', 'test2', '20', '10', '2024-02-22 11:00:00', '30', '2024-02-21 19:00:00', '1');
   
 CREATE TABLE IF NOT EXISTS `kvdb`.`matchcourseuser` (
   `matchId` INT NOT NULL AUTO_INCREMENT,
